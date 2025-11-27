@@ -1,0 +1,240 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inika:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Myeongjo&family=Poiret+One&display=swap');
+
+
+@import "tailwindcss";
+
+@theme{
+  --font-display: 'ibm-plex-sans-condensed', sans-serif;
+  --breakpoint-3xl: 1920px;
+  --color-primary: #44adc9;
+  --color-primary-dark: #3a95b0;
+}
+
+@layer base{
+  html{
+    font-family: var(--font-display);
+  }
+body{
+  background-color: #fcfbfc;
+  overflow-x: hidden;
+}
+}
+.ibm-plex-sans-condensed-thin {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.ibm-plex-sans-condensed-extralight {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.ibm-plex-sans-condensed-light {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ibm-plex-sans-condensed-regular {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-sans-condensed-medium {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ibm-plex-sans-condensed-semibold {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ibm-plex-sans-condensed-bold {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ibm-plex-sans-condensed-thin-italic {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.ibm-plex-sans-condensed-extralight-italic {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.ibm-plex-sans-condensed-light-italic {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ibm-plex-sans-condensed-regular-italic {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ibm-plex-sans-condensed-medium-italic {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ibm-plex-sans-condensed-semibold-italic {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.ibm-plex-sans-condensed-bold-italic {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+.inika-regular {
+  font-family: "Inika", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inika-bold {
+  font-family: "Inika", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* Lato */
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.inter-400 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.inter-300 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.inter-500 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.inter-600 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+
+#add .swiper-button-next,
+#relatedViewed .swiper-button-prev {
+  color: white !important;  
+}
+
+.mask-bottom-fade {
+  mask-image: linear-gradient(to top, transparent 0%, black 40%);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 40%);
+}
+
+.swiper-scrollbar {
+  height: 6px !important;
+  background: #cccbcb00 !important;
+  border-radius: 3px;
+  width: 98% !important;           
+  margin: -0 auto !important;   
+     
+}
+
+
+.swiper-scrollbar-drag {
+ 
+  background: #6d6c6c !important;
+  border-radius: 3px !important;
+}
+
+#relatedViewed .swiper-button-next,
+#relatedViewed .swiper-button-prev {
+  color: black !important;  
+ 
+}
