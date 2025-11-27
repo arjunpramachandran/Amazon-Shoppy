@@ -4,6 +4,7 @@ import DividerWithText from '../components/UI/DividerWithText';
 import { GoogleLogin } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
 import api from '../../API/api';
+import toast from 'react-hot-toast';
 
 
 const Register = () => {
@@ -20,7 +21,10 @@ const Register = () => {
       const res = await api.post("/api/auth/google", { token })
       console.log("Google Response:", credentialResponse);
       console.log("Google Login Response:", res.data);
+      toast.success('Registration Successfull Login Now')
+      navigate('/login')
     } catch (error) {
+      toast.error(error)
       console.error("Google Login Error", error);
     }
 
@@ -37,10 +41,13 @@ const Register = () => {
         password,
       });
 
+
+      toast.success('Registration Successfull Login Now')
       console.log("Register success:", res.data);
+      navigate('/login')
     } catch (error) {
       console.error("Register Error:", error);
-      alert(error.response?.data?.message || "Registration failed");
+      toast.error(error.response?.data?.message || "Registration failed");
     }
 
   }
@@ -48,7 +55,7 @@ const Register = () => {
     <div>
       <div className='bg-white h-screen'>
         <div className='flex flex-col justify-center items-center pt-12 '>
-          <img className='h-10' src="./images/image.png" alt="icon" />
+          <img className='h-10' src="/images/Icon.png" alt="icon" />
           <div className='border flex flex-col px-6  border-[#D9D9D9] rounded-xl mt-6 w-md'>
             <h2 className='text-3xl ibm-plex-sans-condensed-medium  py-4'>Create Account</h2>
             <form action="" onSubmit={handleRegister}>
@@ -78,7 +85,7 @@ const Register = () => {
               <p className='font-semibold text-md '>Buying for work? </p>
               <p className='text-[#2A8FD7] text-sm inika-regular hover:underline'>Create a free business account</p>
               <div className="w-full h-0.5 bg-linear-to-r from-transparent via-[#c0c0c0] to-transparent mt-4"></div>
-              <p className='pt-4 pb-4 inika-regular '>Already have an account?<span className='ms-1 text-[#2A8FD7]  hover:underline' onClick={()=>navigate('/login')}>Sign in<BiSolidRightArrow className='inline text-[10px] ms-2 text-[#2A8FD7]' /></span></p>
+              <p className='pt-4 pb-4 inika-regular '>Already have an account?<span className='ms-1 text-[#2A8FD7]  hover:underline' onClick={() => navigate('/login')}>Sign in<BiSolidRightArrow className='inline text-[10px] ms-2 text-[#2A8FD7]' /></span></p>
               <p className='text-sm'>By creating an account or logging in , you agree to Amazon’s <a className='text-[#2A8FD7] inika-regular hover:underline' href="">Conditions of Use</a> and <a className='text-[#2A8FD7] inika-regular hover:underline' href="">Privacy Notice</a>.</p>
 
 

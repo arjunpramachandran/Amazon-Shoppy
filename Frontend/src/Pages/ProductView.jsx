@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../../API/api";
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -10,10 +10,12 @@ import { productMenus } from "../Data/products";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../Redux/cartSlice";
 
+
 const ProductView = () => {
 
     const dispatch = useDispatch();
     const [qty, setQty] = useState(1);
+    const navigate = useNavigate()
 
     const { id } = useParams();
     const [product, setProduct] = useState(null);
@@ -115,7 +117,12 @@ const ProductView = () => {
                             </button>
                         </div>
                         <div className='py-2'>
-                            <button className='ibm-plex-sans-condensed-regular w-full hover:bg-[#D18109] bg-[#FFA41C] px-[18px] py-[7px] rounded-full cursor-pointer' type="button">Buy Now</button>
+                            <button className='ibm-plex-sans-condensed-regular w-full hover:bg-[#D18109] bg-[#FFA41C] px-[18px] py-[7px] rounded-full cursor-pointer' type="button"
+                            onClick={() =>
+                                    {dispatch(addToCart({ ...product,    qty }))
+                                    navigate('/product-cart')}
+                                }
+                                >Buy Now</button>
                         </div>
                         <div className='text-[#717171] text-[14.99px] gap-3 flex flex-row'>
                             <div>

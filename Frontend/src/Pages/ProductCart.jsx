@@ -143,7 +143,7 @@ const ProductCart = () => {
                       className="bg-[#F0F2F2] hover:bg-[#C3CACA] border border-[#C6C6C6] rounded-[3.12px]"
                       value={item.qty}
                       onChange={(e) =>
-                        handleQtyChange(item.id, e.target.value)
+                        handleQtyChange(item.productId, e.target.value)
                       }
                     >
                       {[1, 2, 3, 4, 5].map((n) => (
@@ -156,7 +156,7 @@ const ProductCart = () => {
 
                     <div
                       className="text-[#1F8394] text-[10.78px] cursor-pointer"
-                      onClick={() => dispatch(removeFromCart(item.id))}
+                      onClick={() => dispatch(removeFromCart(item.productId))}
                     >
                       Delete
                     </div>
@@ -209,8 +209,9 @@ const ProductCart = () => {
 
           <div className="py-2">
             <button
-              className="w-full hover:bg-[#CFAF11] bg-[#FFCC00] px-[18px] py-[7px] rounded-full cursor-pointer"
-              type="button" onClick={()=>navigate('/checkout')}
+              disabled={subtotal === 0}
+              className={`w-full px-[18px] py-[7px] rounded-full  ${subtotal === 0 ? "bg-yellow-200 cursor-not-allowed" : "bg-[#FFCC00] hover:bg-[#CFAF11] cursor-pointer"}`}
+              type="button" onClick={() => navigate('/checkout')}
             >
               Proceed to Buy
             </button>

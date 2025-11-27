@@ -12,7 +12,7 @@ const Checkout = () => {
     const navigate = useNavigate();
     const cart = useSelector((state) => state.cart.items);
     const user = useSelector((state) => state.user.user);
-
+    const dispatch = useDispatch()
     const subtotal = cart.reduce(
         (sum, item) => sum + item.price * item.qty,
         0

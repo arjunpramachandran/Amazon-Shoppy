@@ -6,7 +6,7 @@ import cookieParser from "cookie-parser";
 import userRoutes from "./routes/userRoutes.js";
 import productRout from './routes/productRout.js'
 import orderRoutes from "./routes/orderRoutes.js";
-import { authMiddleware } from "./middleware/authMiddleware.js";
+
 
 
 dotenv.config();
@@ -27,7 +27,7 @@ app.use(
 
 app.use("/api/auth", userRoutes);
 app.use("/api/products", productRout);
-app.use("/api/orders",authMiddleware, orderRoutes);
+app.use("/api/orders", orderRoutes);
 
 connectDB();
 

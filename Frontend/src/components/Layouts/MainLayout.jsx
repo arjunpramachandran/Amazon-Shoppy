@@ -88,7 +88,7 @@ const MainLayout = () => {
         <div>Electronics</div>
         <div>Fashion</div>
         <div>New Releases</div>
-        <div>Home & Kitchen</div>
+        <div className='cursor-pointer' onClick={()=>navigate('/amazone-home')}>Home & Kitchen</div>
         <div>Amazon Pay</div>
       </nav>
       <div className='w-[1440px] mx-auto'>
