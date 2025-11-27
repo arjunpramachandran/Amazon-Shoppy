@@ -76,7 +76,7 @@ const AccountList = () => {
                     <h3 className="mb-2 ps-4 inika-bold text-[16.55px] text-black">Your Account</h3>
                     <ul className="space-y-1 ps-4 text-sm text-[#5C5C5C]">
                         <li>Your Account</li>
-                        <li>Your Orders</li>
+                        <li className='cursor-pointer'onClick={()=>navigate('/orders')}>Your Orders</li>
                         <li>Your Wish List</li>
                         <li>Keep Shopping</li>
                         <li>Your Recommendations</li>

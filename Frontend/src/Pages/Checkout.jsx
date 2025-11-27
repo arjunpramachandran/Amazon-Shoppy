@@ -1,9 +1,13 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { FaPlus } from "react-icons/fa6";
 import api from "../../API/api";
 import toast from 'react-hot-toast'
+import { clearCart } from "../Redux/cartSlice";
+
+
+
 const Checkout = () => {
     const navigate = useNavigate();
     const cart = useSelector((state) => state.cart.items);
@@ -30,6 +34,8 @@ const Checkout = () => {
                 paymentMethod: "Card",
                 totalAmount: subtotal
             });
+
+             dispatch(clearCart());
             toast.success("Congragulation Your Order Placed Successfully")
             navigate("/orders");
         } catch (error) {
